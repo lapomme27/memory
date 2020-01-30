@@ -1,0 +1,31 @@
+<!------------Header------------>
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			MEMORY
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+
+<!------------Content------------>
+<ion-content >
+
+	<ion-grid class="list">
+			<ion-row>
+				<ion-col *ngFor="let object of animals" (click)="showCard(object)" size="4" class="column">
+					<ion-card class="card">
+						<ion-img src={{assets+object.image}}  *ngIf="object.click"></ion-img>
+					</ion-card>
+				</ion-col>
+			</ion-row>
+	</ion-grid>
+
+</ion-content>
+
+
+<!------------Footer------------>
+<ion-footer>
+	<ion-toolbar>
+	</ion-toolbar> 
+</ion-footer>
